@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            TÍNH THƯỞNG TẾT NGUYÊN ĐÁN
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInput">Họ và tên</label>
+                    <input type="text" [(ngModel)]="employee.name" [ngModelOptions]="{standalone: true}" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInput">Lương</label>
+                    <input type="number" [(ngModel)]="employee.salary" [ngModelOptions]="{standalone: true}" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label for="exampleInput">Giới tính</label>
+                    <div class="form-group">
+                        <input type="radio" [(ngModel)]="employee.gender" [ngModelOptions]="{standalone: true}" value="Nam"> Nam
+                        <input type="radio" [(ngModel)]="employee.gender" [ngModelOptions]="{standalone: true}" value="Nu"> Nữ
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInput">Độ tuổi</label>
+                    <select class="form-control" [(ngModel)]="employee.rate" [ngModelOptions]="{standalone: true}">
+                        <option *ngFor='let t of list' value="{{t.rate}}">{{t.age}}</option>
+                    </select>
+                </div>
+            </form> 
+        </div>
+        <div class="card-footer">
+            <p>TIỀN THƯỞNG: {{TienThuong()}} </p>
+        </div>
+    </div>
+</div>

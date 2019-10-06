@@ -1,0 +1,30 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="exampleInput">Họ và tên</label>
+            <input type="text" [(ngModel)]="student.name" [ngModelOptions]="{standalone: true}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="exampleInput">Ngày sinh</label>
+            <input type="date" [(ngModel)]="student.date" [ngModelOptions]="{standalone: true}" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="exampleInput">Giới tính</label>
+            <select class="form-control" [(ngModel)]="student.gender" [ngModelOptions]="{standalone: true}" id="exampleInput">
+                <option>Nam</option>
+                <option>Nữ</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleInput">Điểm</label>
+            <input type="number" [(ngModel)]="student.mark" [ngModelOptions]="{standalone: true}" class="form-control" >
+        </div>
+        <div class="form-group">
+            <label for="exampleInput">Học lực</label>
+            <div class="alert alert-success" role="alert">
+                {{student.results}}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" (click) ="Xeploai()">Grade</button>
+    </form> 
+</div>

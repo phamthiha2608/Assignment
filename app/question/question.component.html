@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="assets/img/ban.png" width="1110" height="200">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">FPT Polytechnic</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                      
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink] = "['/index']">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/introduce']">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/contact']">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  [routerLink] = "['/feedback']">Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hỏi đáp</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tài khoản
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item"  [routerLink] = "['/regis']">Đăng kí</a>
+                            <a class="dropdown-item" [routerLink] = "['/login']">Đăng nhập</a>
+                            <a class="dropdown-item" [routerLink] = "['/forgotpass']">Quên mật khẩu</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Đăng xuất</a>
+                            <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                            <a class="dropdown-item" [routerLink] = "['/update']">Cập nhật tài khoản</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <section>
+            <article>
+                <h3>Hỏi đáp cho thành viên</h3>
+                <label for="ExampleInput"><span style="color: red">Lưu ý:</span> Đăng nhập trước khi đặt câu hỏi</label>
+                <div class="form-group Search row">
+                    <input type="text" class="form-control col-sm-11" placeholder="Câu hỏi của bạn...">
+                    <button><i class='fas fa-search'></i></button>
+                </div>
+                <h5>Câu hỏi thường gặp:</h5>
+                
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Hồ Văn A: Trang web chỉ có kiểm tra một môn hay nhiều môn đc ạ ?
+                            </button>
+                        </h2>
+                        </div>
+                    
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Được một môn thôi em nha.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Nguyễn Ngọc Thái: Em có thể xem lại bài thi của mình được không ạ?
+                            </button>
+                        </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Được nha em.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Lê Thị Châu Sa: Em bị lỡ giờ thi, em có thể xin thi lại được không ạ?
+                            </button>
+                        </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Em vào liên hệ và điền thông tin với nội dung là xin thi lại với lý do giúp ad nha!
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Mai Thị Loan: Tài liệu tự ôn hay sao ạ?
+                            </button>
+                        </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                        <div class="card-body">
+                           Tài liệu thì có thể liên hệ giáo viên nha bạn.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Đặng Đình Long: Sao em không vào thi được vậy ad ?
+                            </button>
+                        </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Bạn check mail lại giúp ad nha.
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <aside class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <i class='fas fa-th-large'></i>&nbsp;   <a class="btn" [routerLink] ="['/object']"><b>DANH MỤC MÔN HỌC </b>  </a>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình android nâng cao</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Xây dựng trang web</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Cơ sở dữ liệu</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">SQL Server</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Internet Marketing</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình hướng đối tượng với Java</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình hướng PHP</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Điện toán đám mây</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình android cơ bản</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình game 2D</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Thiết kế giao diện trên Android</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Thiết kế web cho điện thoại di động </a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình ASP.NET</a>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <footer>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink] = "['/index']">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/introduce']">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/contact']">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  [routerLink] = "['/feedback']">Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hỏi đáp</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
+

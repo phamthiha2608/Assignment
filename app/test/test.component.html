@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body (onload)="setTimeout('delayer()', 20000)">
+    <div class="container">
+        <div class="image">
+            <img src="assets/img/ban.png" width="1110" height="200">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">FPT Polytechnic</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                      
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink] = "['/index']">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/introduce']">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/contact']">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  [routerLink] = "['/feedback']">Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hỏi đáp</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tài khoản
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item"  [routerLink] = "['/regis']">Đăng kí</a>
+                            <a class="dropdown-item" [routerLink] = "['/login']">Đăng nhập</a>
+                            <a class="dropdown-item" [routerLink] = "['/forgotpass']">Quên mật khẩu</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Đăng xuất</a>
+                            <a class="dropdown-item" href="#">Đổi mật khẩu</a>
+                            <a class="dropdown-item" [routerLink] = "['/update']">Cập nhật tài khoản</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <section>
+            <article>
+                <div id="carouselExampleControls" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li class="1 active"></li>
+                        <li class="2"></li>
+                        <li class="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card">
+                                <div class="card-header Cardheader">
+                                    <i class='fas fa-th-large'></i>&nbsp; Xây dựng trang web
+                                </div>
+                                <div class="card-body Cardbody">
+                                    <h6>1. Trong kĩ thuật chỉnh nâng cao có những kĩ thuật nào?</h6>
+                                    <button type="button" class="btn btn-primary Time">
+                                        <span class="badge badge-light Trang_1">00:05</span>
+                                    </button>
+                                    <hr/>
+                                    <form action="" class="RadioAnswer">
+                                        <input type="radio" name="gender" value="1" id="1"> Đối xứng<br>
+                                        <input type="radio" name="gender" value="2" id="2"> Bẻ văn bản<br>
+                                        <input type="radio" name="gender" value="3" id="3"> Khối văn bản<br>
+                                        <input type="radio" name="gender" value="4" id="4"> Không đối xứng
+                                    </form>
+                                </div>
+                                <div class="card-footer text-muted Cardfooter">
+                                    MARKS: 0 / 80
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-header Cardheader">
+                                        <i class='fas fa-th-large'></i> &nbsp; Xây dựng trang web
+                                </div>
+                                <div class="card-body Cardbody">
+                                    <h6>2. Dreamweaver quản lý các Snippet trong panel nào?</h6>
+                                    <button type="button" class="btn btn-primary Time">
+                                        <span class="badge badge-light Trang_2">00:05</span>
+                                    </button>
+                                    <hr/>
+                                    <form action="" class="RadioAnswer">
+                                        <input type="radio" name="gender" value="5" id="5"> Code<br>
+                                        <input type="radio" name="gender" value="6" id="6"> Snippet panel<br>
+                                        <input type="radio" name="gender" value="7" id="7"> Assets panel<br>
+                                        <input type="radio" name="gender" value="8" id="8"> Site panel
+                                    </form>
+                                </div>
+                                <div class="card-footer text-muted Cardfooter">
+                                    MARKS: 1 / 80
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-header Cardheader">
+                                    <i class='fas fa-th-large'></i>&nbsp; Xây dựng trang web
+                                </div>
+                                <div class="card-body Cardbody">
+                                    <h5>3. Tạo thanh menu ta nên chọn component nào?</h5>
+                                    <button type="button" class="btn btn-primary Time">
+                                        <span class="badge badge-light Trang_3">00:05</span>
+                                    </button>
+                                    <hr/>
+                                    <form action="" class="RadioAnswer">
+                                        <input type="radio" name="gender" value="5" checked id="5"> Button<br>
+                                        <input type="radio" name="gender" value="6" id="6"> Card<br>
+                                        <input type="radio" name="gender" value="7" id="7"> Navbar<br>
+                                        <input type="radio" name="gender" value="8" id="8"> Barget
+                                    </form>
+                                </div>
+                                <div class="card-footer text-muted Cardfooter">
+                                        MARKS: 2 / 80
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+                <div class="icon-button">
+                    <button type="button" class="btn btn-light btn-circle btn-xl">
+                    <i class="far fa-hand-point-up" style="color:blue" (click) ="top()"></i></button>                        
+                    <button type="button" class="btn btn-light btn-circle btn-xl">
+                    <i class="far fa-hand-point-left" style="color:blue" (click) ="previous()"></i></button>      
+                    <button type="button" class="btn btn-light btn-circle btn-xl">
+                    <i class="far fa-hand-point-right" style="color:blue" (click) ="next()"></i></button>      
+                    <button type="button" class="btn btn-light btn-circle btn-xl">
+                    <i class="far fa-hand-point-down" style="color:blue" (click) ="bottom()"></i></button>   
+                </div>  
+            </article>
+            <aside class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <i class='fas fa-th-large'></i>&nbsp;   <a class="btn" [routerLink] ="['/object']"><b>DANH MỤC MÔN HỌC </b>  </a>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình android nâng cao</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Xây dựng trang web</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Cơ sở dữ liệu</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">SQL Server</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Internet Marketing</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình hướng đối tượng với Java</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình hướng PHP</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Điện toán đám mây</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình android cơ bản</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình game 2D</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Thiết kế giao diện trên Android</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Thiết kế web cho điện thoại di động </a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình ASP.NET</a>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <footer>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink] = "['/index']">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/introduce']">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/contact']">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  [routerLink] = "['/feedback']">Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hỏi đáp</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+   
+</body>
+</html>
+

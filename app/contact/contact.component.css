@@ -1,0 +1,16 @@
+
+.text {
+    color: chocolate;
+}
+.section , .article {
+    background-color:darkgray;
+}
+.font {
+    color: mediumblue;
+    font-size: 20px;
+}
+footer {
+    font-size: 20px;
+    padding-top: 3%;
+  }
+

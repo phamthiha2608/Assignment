@@ -1,0 +1,58 @@
+.logo {
+    padding-top: 10%;
+    padding-left: 32%;
+}
+.User , .Pass {
+    width: 100%;
+    position: relative;
+}
+.User input[type=text] {
+    border-radius: 100px;
+    padding-left: 15%;
+    border: 1px solid cadetblue;
+    height: 2.4em;
+}
+.User i , .Pass i {
+    position: absolute;
+    top: 0.75em;
+    color: royalblue;
+    padding-left: 5%;
+}
+.Pass input[type=password] {
+    border-radius: 100px;
+    padding-left: 15%;
+    border: 1px solid cadetblue;
+    height: 2.5em;
+}
+.Remem {
+    padding-left: 8px;
+}
+.right {
+    padding-left: 35%;
+}
+.button {
+    padding-top: 5%;
+    padding-left: 35%;
+}
+aside {
+    float: right;
+    width: 30%;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  article {
+    float: left;
+    padding-left: 15%;
+    padding-top: 20px;
+    width: 70%;
+  }
+  section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  footer {
+    font-size: 20px;
+    padding-top: 3%;
+  }
