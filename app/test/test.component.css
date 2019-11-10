@@ -1,0 +1,62 @@
+
+aside {
+    float: right;
+    width: 30%;
+    padding-top: 20px;
+  }
+  article {
+    float: left;
+    padding-top: 20px;
+    width: 70%;
+  }
+  section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .card{
+    margin-top: 20px;
+}
+  .Cardheader {
+    text-align: left;
+    font-size:20px;
+    font-weight: bold;
+    height: 2em;
+    padding: 0.2em 0 0 2%;
+}
+.Time {
+    width: 7%;
+    margin: -2em 0 0 5%;
+    padding: 0;
+    float: right;
+}
+.Time span {
+    margin: 0.2em 0 0.1em 0;
+}
+.Cardbody {
+    text-align: left;
+}
+.RadioAnswer {
+    margin: 1em 0 0 0;
+}
+.Cardfooter {
+    text-align: left;
+    height: 3em;
+}
+footer {
+  font-size: 20px;
+  padding-top: 3%;
+}
+.btn-circle.btn-xl {    
+  border: solid 2px #CCCCCC;
+  border-radius:40%;
+  -moz-border-radius: 40%;
+  -webkit-border-radius: 40%;
+}
+.icon-button{
+  margin-top: 15%;
+  margin-left:280px;
+}
+.bt{
+  margin-left: 20px;
+}

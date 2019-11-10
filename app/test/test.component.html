@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="assets/img/ban.png" width="1110" height="200">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">FPT Polytechnic</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                      
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink] = "['/index']">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/introduce']">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/contact']">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  [routerLink] = "['/feedback']">Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/question']">Hỏi đáp</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tài khoản
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item"  [routerLink] = "['/regis']">Đăng kí</a>
+                            <a class="dropdown-item" [routerLink] = "['/login']">Đăng nhập</a>
+                            <a class="dropdown-item" [routerLink] = "['/forgotpass']">Quên mật khẩu</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Đăng xuất</a>
+                            <a class="dropdown-item"  [routerLink] = "['/changepass']">Đổi mật khẩu</a>
+                            <a class="dropdown-item" [routerLink] = "['/update']">Cập nhật tài khoản</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <section>
+            <article>
+                <div class="top">
+                    <div class="card border-secondary ">
+                        <div class="card-header bg-transparent border-secondary">
+                            Điểm: {{mark}}
+                        </div>
+                        <div class="card-body text-secondary" *ngFor="let i of Quiz | paginate: {itemsPerPage: pagesize, currentPage: pagecurrent}">
+                            <p>Câu {{pagecurrent}}: {{i.Text}}</p>
+                            <div class="form-check" *ngFor = 'let j of i.Answers'>
+                                <input class="form-check-input" type="radio" name={{i.Id}} value={{j.Id}} [(ngModel)]="task.Ans[pagecurrent -1]" [ngModelOptions]="{standalone: true}">
+                                <label class="form-check-label" for="exampleRadios1">
+                                    {{j.Text}}
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent border-secondary text-center">
+                            <div class="bottom">
+                                <i class='far fa-hand-point-up' style="color:blue" (click) = 'home()' *ngIf = "showfirth"></i>
+                                <i class='far fa-hand-point-right' style="color:blue" (click) = 'next()' *ngIf = "showend"></i>
+                                <i class='far fa-hand-point-down' style="color:blue" (click) = 'end()' *ngIf = "showlast"></i>
+                                <i class='far fa-hand-point-left' style="color:blue" (click) = 'previrous()' *ngIf = "showbegin"></i>
+    
+                                <button type="button" class="btn btn-primary bt" data-toggle="modal" data-target="#exampleModal" (click) = 'finish()' *ngIf = 'showfinish'>
+                                    Hoàn thành
+                                </button>
+                    
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf = "show">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Hoàn thành bài thi</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Điểm của bạn là: {{mark}}
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Tiếp tục</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </article>
+            <aside class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <i class='fas fa-th-large'></i>&nbsp;   <a class="btn" [routerLink] ="['/object']"><b>DANH MỤC MÔN HỌC </b>  </a>
+                        </h5>
+                    </div>
+                    <div *ngFor="let a of listmon" id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <a [routerLink]="['/object', a.Id]" (click) = 'thi()' class="list-group-item list-group-item-action">{{a.Name}}</a>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <footer>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink] = "['/index']">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/introduce']">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/contact']">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  [routerLink] = "['/feedback']">Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/question']">Hỏi đáp</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+   
+</body>
+</html>
+

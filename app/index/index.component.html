@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="assets/img/ban.png" width="1110" height="200">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">FPT Polytechnic</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                      
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink] = "['/index']">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/introduce']">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/contact']">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  [routerLink] = "['/feedback']">Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/question']">Hỏi đáp</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tài khoản
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item"  [routerLink] = "['/regis']">Đăng kí</a>
+                            <a class="dropdown-item" [routerLink] = "['/login']">Đăng nhập</a>
+                            <a class="dropdown-item" [routerLink] = "['/forgotpass']">Quên mật khẩu</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Đăng xuất</a>
+                            <a class="dropdown-item" [routerLink] = "['/changepass']">Đổi mật khẩu</a>
+                            <a class="dropdown-item" [routerLink] = "['/update']">Cập nhật tài khoản</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <section>
+            <article>
+                <img src="assets\img\ban1.png" class="ImgBan">
+                <img src="assets\img\ban2.png" class="ImgBan1">
+                <div class="icon-button">
+                    <button type="button" class="btn btn-light btn-circle btn-xl">
+                    <i class="far fa-hand-point-up" style="color:blue"></i></button>                        
+                    <button type="button" class="btn btn-light btn-circle btn-xl">
+                    <i class="far fa-hand-point-left" style="color:blue"></i></button>      
+                    <button type="button" class="btn btn-light btn-circle btn-xl">
+                    <i class="far fa-hand-point-right" style="color:blue"></i></button>      
+                    <button type="button" class="btn btn-light btn-circle btn-xl">
+                    <i class="far fa-hand-point-down" style="color:blue"></i></button>   
+                </div>  
+            </article>
+            <aside class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <i class='fas fa-th-large'></i>&nbsp;   <a class="btn" [routerLink] ="['/object']"><b>DANH MỤC MÔN HỌC </b>  </a>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình android nâng cao</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Xây dựng trang web</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Cơ sở dữ liệu</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">SQL Server</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Internet Marketing</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình hướng đối tượng với Java</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình hướng PHP</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Điện toán đám mây</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình android cơ bản</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình game 2D</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Thiết kế giao diện trên Android</a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Thiết kế web cho điện thoại di động </a>
+                        <a [routerLink] ="['/test']" class="list-group-item list-group-item-action">Lập trình ASP.NET</a>
+                    </div>
+                </div>
+            </aside>
+        </section>
+        <footer>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink] = "['/index']">Trang chủ <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/introduce']">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/contact']">Liên hệ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  [routerLink] = "['/feedback']">Góp ý</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink] = "['/question']">Hỏi đáp</a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>

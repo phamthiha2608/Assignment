@@ -1,0 +1,33 @@
+
+aside {
+    float: right;
+    width: 30%;
+    padding-top: 20px;
+  }
+  article {
+    float: left;
+    padding-top: 20px;
+    width: 70%;
+  }
+  section:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .txt {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+  .myLabel {
+    padding-top: 7px;
+  }
+  .myRadio {
+    padding-top: 7px;
+  }
+  .logo {
+    padding-left: 40%;
+  }
+  footer {
+    font-size: 20px;
+    padding-top: 3%;
+  }
