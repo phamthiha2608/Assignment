@@ -77,12 +77,12 @@
                                 <i class='far fa-hand-point-down' style="color:blue" (click) = 'end()' *ngIf = "showlast"></i>
                                 <i class='far fa-hand-point-left' style="color:blue" (click) = 'previrous()' *ngIf = "showbegin"></i>
     
-                                <button type="button" class="btn btn-primary bt" data-toggle="modal" data-target="#exampleModal" (click) = 'finish()' *ngIf = 'showfinish'>
+                                <button type="button" class="btn btn-primary bt" data-toggle="modal" data-target="#exampleModal1" (click) = 'finish()' *ngIf = 'showfinish'>
                                     Hoàn thành
                                 </button>
                     
                                 <!-- Modal -->
-                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf = "show">
+                                <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" *ngIf = 'show'>
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">

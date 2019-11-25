@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class TestComponent implements OnInit {
 
-  url='./assets/db/subjects.json';
+  url='./assets/db/Subjects.json';
   listmon: any;
   Quiz: any;
   Id;
@@ -25,8 +25,8 @@ export class TestComponent implements OnInit {
     "IdSubject": "",
     Ans: [],
   }
-  Student = JSON.parse(localStorage.getItem('user'));
-  Students = JSON.parse(localStorage.getItem('listuser'));
+  Student = JSON.parse(localStorage.getItem('student'));
+  ListStudent = JSON.parse(localStorage.getItem('list'));
   mark = 0;
   show = false;
 
@@ -106,13 +106,13 @@ export class TestComponent implements OnInit {
    finish() {
       this.tinhdiem();
       this.Student.marks = this.mark;
-      for(var i = 0; i < this.Students.length; i++) {
-        if(this.Student.username === this.Students[i].username) {
-          this.Students[i].marks = this.mark;
+      for(var i = 0; i < this.ListStudent.length; i++) {
+        if(this.Student.username === this.ListStudent[i].username) {
+          this.ListStudent[i].marks = this.mark;
         }
       }
-      localStorage.setItem('listuser', JSON.stringify(this.Students));
-      localStorage.setItem('user', JSON.stringify(this.Student));
+      localStorage.setItem('list', JSON.stringify(this.ListStudent));
+      localStorage.setItem('student', JSON.stringify(this.Student));
       localStorage.setItem('task', JSON.stringify(this.task));
       this.show = true;
    }

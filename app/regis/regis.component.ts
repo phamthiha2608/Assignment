@@ -19,7 +19,7 @@ export class RegisComponent implements OnInit {
     "password": '',
     "gender":true
   };
-  Liststudent=JSON.parse(localStorage.getItem('liststudent'))
+  Liststudent=JSON.parse(localStorage.getItem('list'));
 
 
   constructor() { }

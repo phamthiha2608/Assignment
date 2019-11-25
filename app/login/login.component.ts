@@ -9,31 +9,24 @@ import {HttpClient} from '@angular/common/http';
 })
 export class LoginComponent implements OnInit {
    
-	url='./assets/db/Students.json';
 	taikhoan:any;
 	matkhau:any;
-	ListStudent=JSON.parse(localStorage.getItem('liststudent'));
-
+	ListStudent=JSON.parse(localStorage.getItem('list'));
+	showlogin = false;
 	
 	constructor(private http:HttpClient){}
 
 	ngOnInit() {
-		this.getData().subscribe(data=>{
-			this.ListStudent=data;
-		});
-	}
-  			
-	getData() {
-		return this.http.get(this.url);
 	}
 
 	Login() {
+		this.showlogin = false;
 		for(var i=0; i<this.ListStudent.length;i++) 
 		{
 			if(this.taikhoan === this.ListStudent[i].username && this.matkhau === this.ListStudent[i].password)
 			{
-				location.pathname= '/object';
-				localStorage.setItem('liststudent',JSON.stringify(this.ListStudent));
+				this.showlogin = true;
+				localStorage.setItem('student',JSON.stringify(this.ListStudent[i]));
 				return 0;
 			}
 		}

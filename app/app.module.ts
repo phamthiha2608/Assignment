@@ -38,8 +38,7 @@ import { ChangepassComponent } from './changepass/changepass.component';
     UpdateComponent,
     ObjectComponent,
     TestComponent,
-    ChangepassComponent
-    ],
+    ChangepassComponent    ],
   imports: [
     BrowserModule,
     AppRoutingModule ,

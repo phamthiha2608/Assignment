@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { fakeAsync } from '@angular/core/testing';
 
 @Component({
   selector: 'app-update',
@@ -9,7 +8,7 @@ import { fakeAsync } from '@angular/core/testing';
 export class UpdateComponent implements OnInit {
 
   Student = JSON.parse(localStorage.getItem('student'));
-  ListStudent = JSON.parse(localStorage.getItem('liststudent'))
+  ListStudent = JSON.parse(localStorage.getItem('liststudent'));
   showfullnamebt = true;
   showfullname = true;
   showemailbt = true;

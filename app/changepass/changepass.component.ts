@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ChangepassComponent implements OnInit {
 
   Student = JSON.parse(localStorage.getItem('student'));
-  ListStudent = JSON.parse(localStorage.getItem('liststudent'));
+  ListStudent = JSON.parse(localStorage.getItem('list'));
   email: "";
   username: "";
-  pass = "";
-  forgotpass = "";
+  Newpass = "";
+  Renewpass = "";
   show = false;
-  
+
   constructor() { }
 
   ngOnInit() {
@@ -22,12 +22,12 @@ export class ChangepassComponent implements OnInit {
 
   Changepass() {
     let x = 0;
-    if(this.pass.length > 8) {
-      if(this.pass === this.forgotpass) {
+    if(this.Newpass.length > 7) {
+      if(this.Newpass === this.Renewpass) {
         for(var i = 0; i < this.ListStudent.length; i++) {
           if(this.ListStudent[i].username === this.username && this.ListStudent[i].email === this.email) {
-            this.ListStudent[i].pass = this.forgotpass;
-            localStorage.setItem('liststudent', JSON.stringify(this.ListStudent));
+            this.ListStudent[i].password = this.Renewpass;
+            localStorage.setItem('list', JSON.stringify(this.ListStudent));
             x = 1;
             this.show = true;
           }
@@ -36,7 +36,7 @@ export class ChangepassComponent implements OnInit {
           alert('Email hoặc tên tài khoản không khớp.');
         }
         if(this.Student.username === this.username && this.Student.email === this.email) {
-          this.Student.pass = this.forgotpass;
+          this.Student.password = this.Renewpass;
           localStorage.setItem('student', JSON.stringify(this.Student));
         }
       }
@@ -50,8 +50,6 @@ export class ChangepassComponent implements OnInit {
   }
   Logout() {
     this.Student = null;
-    localStorage.setItem('user', JSON.stringify(this.Student));
+    localStorage.setItem('student', JSON.stringify(this.Student));
   }
-  
-
 }
