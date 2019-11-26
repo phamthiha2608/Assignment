@@ -45,7 +45,7 @@ export class ChangepassComponent implements OnInit {
       }
     }
     else {
-      alert('Mật khẩu phải từ 8 kí tự trở lên.');
+      alert('Mật khẩu phải từ 7 kí tự trở lên.');
     }
   }
   Logout() {
