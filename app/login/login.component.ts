@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
 			if(this.taikhoan === this.ListStudent[i].username && this.matkhau === this.ListStudent[i].password)
 			{
 				this.showlogin = true;
+				location.pathname='/object';
 				localStorage.setItem('student',JSON.stringify(this.ListStudent[i]));
 				return 0;
 			}
