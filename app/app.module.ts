@@ -47,7 +47,7 @@ import { ChangepassComponent } from './changepass/changepass.component';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([ 
-      { path: '', 	component: IndexComponent},
+      { path: 'index', 	component: IndexComponent},
       { path: 'introduce', component: IntroduceComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'feedback', component: FeedbackComponent },
